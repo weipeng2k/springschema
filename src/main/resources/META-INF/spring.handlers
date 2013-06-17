@@ -1,0 +1,3 @@
+http\://blog.csdn.net/cutesource/schema/people=com.weipeng.springschema.MyNamespaceHandler
+http\://www.weipeng.springschema/schema/a=com.weipeng.springschema.ANamespaceHandler
+http\://www.weipeng.springschema/schema/b=com.weipeng.springschema.BNamespaceHandler
