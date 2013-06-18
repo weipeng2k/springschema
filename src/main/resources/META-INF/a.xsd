@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.weipeng.springschema/schema/a"
+<xsd:schema xmlns="http://www.weipeng.com/springschema"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
-	targetNamespace="http://www.weipeng.springschema/schema/a"
-	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	xmlns:tool="http://www.springframework.org/schema/tool"
+	targetNamespace="http://www.weipeng.com/springschema">
+
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
 	<xsd:import namespace="http://www.springframework.org/schema/beans" />
-	<xsd:element name="a">
+	<xsd:import namespace="http://www.springframework.org/schema/tool" />
+
+	<xsd:annotation>
+		<xsd:documentation><![CDATA[ Namespace support for springschema. ]]></xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:complexType name="aType">
+		<xsd:attribute name="id" type="xsd:ID">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ The unique identifier for a bean. ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="prefix" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ prefix. ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="suffix" type="xsd:string" use="required">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ suffix. ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="bType">
+		<xsd:attribute name="id" type="xsd:ID">
+			<xsd:annotation>
+				<xsd:documentation><![CDATA[ The unique identifier for a bean. ]]></xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:element name="a" type="aType">
 		<xsd:annotation>
-			<xsd:documentation></xsd:documentation>
+			<xsd:documentation><![CDATA[ a config ]]></xsd:documentation>
 		</xsd:annotation>
-		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:extension base="beans:identifiedType">
-				</xsd:extension>
-			</xsd:complexContent>
-		</xsd:complexType>
 	</xsd:element>
-</xsd:schema> 
+
+	<xsd:element name="b" type="bType">
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ b config ]]></xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

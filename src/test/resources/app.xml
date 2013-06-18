@@ -1,15 +1,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cutesource="http://blog.csdn.net/cutesource/schema/people"
-	xmlns:weipeng-a="http://www.weipeng.springschema/schema/a"
-	xmlns:weipeng-b="http://www.weipeng.springschema/schema/b"
-	xsi:schemaLocation="  
-http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+	xmlns:springschema="http://www.weipeng.com/springschema"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
 http://blog.csdn.net/cutesource/schema/people http://blog.csdn.net/cutesource/schema/people.xsd
-http://www.weipeng.springschema/schema/a http://www.weipeng.springschema/schema/a.xsd
-http://www.weipeng.springschema/schema/b http://www.weipeng.springschema/schema/b.xsd"
+http://www.weipeng.com/springschema http://www.weipeng.com/springschema/a.xsd"
 	default-autowire="byName">
 	<cutesource:people id="cutesource" name="袁志俊" age="27" />
 
-	<weipeng-b:b id="b" />
-	<weipeng-a:a id="a" />
+	<springschema:b id="b" />
+	<springschema:a id="a" prefix="[" suffix="]"/>
+	<springschema:a id="x" prefix="{{" suffix="}}"/>
 </beans> 

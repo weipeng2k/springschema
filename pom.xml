@@ -28,6 +28,11 @@
 			<version>2.5.6</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba.platform.shared</groupId>
+			<artifactId>dubbo.all</artifactId>
+			<version>2.5.3</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
