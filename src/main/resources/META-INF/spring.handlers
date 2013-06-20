@@ -1,2 +1,1 @@
-http\://blog.csdn.net/cutesource/schema/people=com.weipeng.springschema.MyNamespaceHandler
-http\://www.weipeng.com/springschema=com.weipeng.springschema.ANamespaceHandler
+http\://dzone.alibaba-inc.com\:12121/springschema=com.weipeng.springschema.ANamespaceHandler

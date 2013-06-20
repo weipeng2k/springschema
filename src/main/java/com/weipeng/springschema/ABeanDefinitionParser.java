@@ -22,12 +22,9 @@ public class ABeanDefinitionParser implements BeanDefinitionParser {
 			arg1.getRegistry().registerBeanDefinition("a", def);
 		}
 
-//		def.getPropertyValues().addPropertyValue("b",
-//				arg1.getRegistry().getBeanDefinition("b"));
-		
 		String prefix = arg0.getAttribute("prefix");
 		def.getPropertyValues().addPropertyValue("prefix", prefix);
-		
+
 		String suffix = arg0.getAttribute("suffix");
 		def.getPropertyValues().addPropertyValue("suffix", suffix);
 

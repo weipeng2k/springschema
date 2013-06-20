@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.weipeng.com/springschema"
+<xsd:schema xmlns="http://dzone.alibaba-inc.com:12121/springschema"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:tool="http://www.springframework.org/schema/tool"
-	targetNamespace="http://www.weipeng.com/springschema">
+	targetNamespace="http://dzone.alibaba-inc.com:12121/springschema">
 
 	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
 	<xsd:import namespace="http://www.springframework.org/schema/beans" />
@@ -29,6 +29,12 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
+	
+	<xsd:element name="a" type="aType">
+		<xsd:annotation>
+			<xsd:documentation><![CDATA[ a config ]]></xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
 
 	<xsd:complexType name="bType">
 		<xsd:attribute name="id" type="xsd:ID">
@@ -37,12 +43,6 @@
 			</xsd:annotation>
 		</xsd:attribute>
 	</xsd:complexType>
-
-	<xsd:element name="a" type="aType">
-		<xsd:annotation>
-			<xsd:documentation><![CDATA[ a config ]]></xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
 
 	<xsd:element name="b" type="bType">
 		<xsd:annotation>
