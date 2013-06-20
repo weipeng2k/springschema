@@ -7,4 +7,4 @@ public class ANamespaceHandler extends NamespaceHandlerSupport {
         registerBeanDefinitionParser("a", new ABeanDefinitionParser());  
         registerBeanDefinitionParser("b", new BBeanDefinitionParser());  
     }  
-}  
+}
