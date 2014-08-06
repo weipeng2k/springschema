@@ -1,8 +1,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:springschema="http://dzone.alibaba-inc.com:12121/springschema"
+	xmlns:springschema="http://dzone.heihei.com:12121/springschema"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
-	http://dzone.alibaba-inc.com:12121/springschema http://dzone.alibaba-inc.com:12121/a.xsd"
+	http://dzone.heihei.com:12121/springschema http://dzone.heihei.com:12121/a.xsd"
 	default-autowire="byName">
 
 	<springschema:b id="b" />
@@ -10,7 +10,7 @@
 	<springschema:a id="x" prefix="{{" suffix="}}" />
 
 	<bean
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" autowire="byName">
 		<property name="location">
 			<value>classpath:config.property</value>
 		</property>
